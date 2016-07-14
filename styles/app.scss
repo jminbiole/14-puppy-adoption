@@ -4,3 +4,82 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+body {
+  margin: 0;
+  font-family: fantasy;
+}
+p {
+  margin-bottom: 0;
+}
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #262c2e;
+  outline: none;
+  font-size: 1rem;
+}
+.btn {
+  background: #ff5901;
+  width: 3.5rem;
+  font-size: 1rem;
+  padding: .3rem;
+  color: #fff;
+  border-radius: 7%;
+  border: 1px solid #ff5901;
+  margin: 1rem 0;
+}
+.nav {
+  width: 100%;
+}
+
+header {
+  background: #ff5901;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 60rem;
+
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  padding: .6rem;
+}
+
+.circle {
+  background: #ff5901;
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.add-pup {
+  background: #4E5A5E;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    width: 60rem;
+  }
+  &__text {
+    margin: 1rem 0 0 0;
+  }
+  &__input {
+    background: #4E5A5E;
+  }
+}
+
+.dog-card {
+
+}
+
+.card {
+  width: 5rem;
+}
