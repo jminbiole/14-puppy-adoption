@@ -59,7 +59,13 @@
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
 
+
   <script type="text/javascript">
+  var App = require('app');
+  var appEl = document.querySelector('.add-pup');
+  var thing = new App(appEl);
+  thing.start();
+
   </script>
 </body>
 
