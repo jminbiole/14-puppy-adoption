@@ -4,6 +4,9 @@
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+
+$gutter: 1rem;
+
 body {
   margin: 0;
   font-family: fantasy;
@@ -13,7 +16,9 @@ p {
 }
 input {
   width: 100%;
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-bottom: 2px solid #262c2e;
   outline: none;
   font-size: 1rem;
@@ -76,10 +81,39 @@ header {
   }
 }
 
+.dog-tiles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.img-frame {
+  margin: 0 1rem;
+}
 .dog-card {
+  background: #f1eff1;
+  width: 60rem;
+  display: flex;
+  padding: $gutter;
+  margin: $gutter;
+  border-radius: 1%;
 
+
+  &__info {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  &__name {
+    margin-top: 0;
+  }
+  &__input {
+    background: #f1eff1;
+  }
 }
 
+.btns {
+  display: flex;
+  justify-content: space-between;
+}
 .card {
   width: 5rem;
 }
