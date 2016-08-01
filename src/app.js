@@ -4,7 +4,7 @@ import PuppyView from 'puppy-view';
 import CreateForm from 'create-form';
 
 export default class App {
-  constructor (element) {
+  constructor(element) {
     this.element = element;
     this.data = [];
 
@@ -26,11 +26,11 @@ export default class App {
   start() {
     return fetch(`http://tiny-tn.herokuapp.com/collections/ryan-puppy`)
       .then((res) => res.json())
-        .then((data) => {
-          this.data = data;
-          this.render(data);
-          console.log(this.data);
-        });
+      .then((data) => {
+        this.data = data;
+        this.render(data);
+        console.log(this.data);
+      });
   }
 
   setupForm() {
@@ -41,14 +41,14 @@ export default class App {
 
     const btn = document.querySelector('.btn');
     btn.addEventListener('click', (ev) => {
-    const name = nameInput.innerText.value;
-    const age = ageInput.value;
-    const url = urlInput.value;
-    const  profile = profileInput.value;
+      const name = nameInput.innerText.value;
+      const age = ageInput.value;
+      const url = urlInput.value;
+      const profile = profileInput.value;
 
-    // ev.preventDefault();
+      // ev.preventDefault();
 
-    // fetch(`http://tiny-tn.herokuapp.com/collections/jm-puppy`, {
+      // fetch(`http://tiny-tn.herokuapp.com/collections/jm-puppy`, {
       //   method: 'POST',
       //   body: JSON.stringify({ name, age, url, profile }),
       //   headers: {

@@ -18,44 +18,44 @@
         </div>
       </header>
     </div>
-      <form class="add-pup">
-        <div class="add-pup__content">
-          <h2 class="add-pup__text">Add a new perpee</h2>
-          <p class="add-pup__name">Name</p>
-          <input class="add-pup__input" type="text" name="" id="">
-          <p class="add-pup__age">Age</p>
-          <input class="add-pup__input" type="text" name="" id="">
-          <p class="add-pup__url">Photo URL</p>
-          <input class="add-pup__input" type="text" name="" id="">
-          <p class="add-pup__profile">Profile</p>
-          <input class="add-pup__input" type="text" name="" id="">
-          <button class="btn" type="submit">Save</button>
-        </div>
-      </form>
+    <form class="add-pup">
+      <div class="add-pup__content">
+        <h2 class="add-pup__text">Add a new perpee</h2>
+        <p class="add-pup__name">Name</p>
+        <input class="add-pup__input" type="text" name="" id="">
+        <p class="add-pup__age">Age</p>
+        <input class="add-pup__input" type="text" name="" id="">
+        <p class="add-pup__url">Photo URL</p>
+        <input class="add-pup__input" type="text" name="" id="">
+        <p class="add-pup__profile">Profile</p>
+        <input class="add-pup__input" type="text" name="" id="">
+        <button class="btn" type="submit">Save</button>
+      </div>
+    </form>
 
     <div class="dog-tiles">
       <div class="dog-content">
-      <div class="dog-card">
-        <div class="img-frame">
-          <img src="http://www.placecage.com/c/300/300" alt="">
-        </div>
-        <div class="dog-card__info">
-          <p class="dog-card__name">Name</p>
-          <input class="dog-card__input" type="text" name="" id="">
-          <p class="dog-card__age">Age</p>
-          <input class="dog-card__input" type="text" name="" id="">
-          <p class="dog-card__url">Photo URL</p>
-          <input class="dog-card__input" type="text" name="" id="">
-          <p class="dog-card__profile">Profile</p>
-          <input class="dog-card__input" type="text" name="" id="">
-          <div class="btns">
-            <button class="btn card">Delete</button>
-            <button class="btn card">Update</button>
+        <div class="dog-card">
+          <div class="img-frame">
+            <img src="http://www.placecage.com/c/300/300" alt="">
+          </div>
+          <div class="dog-card__info">
+            <p class="dog-card__name">Name</p>
+            <input class="dog-card__input" type="text" name="" id="">
+            <p class="dog-card__age">Age</p>
+            <input class="dog-card__input" type="text" name="" id="">
+            <p class="dog-card__url">Photo URL</p>
+            <input class="dog-card__input" type="text" name="" id="">
+            <p class="dog-card__profile">Profile</p>
+            <input class="dog-card__input" type="text" name="" id="">
+            <div class="btns">
+              <button class="btn card">Delete</button>
+              <button class="btn card">Update</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
   <script src="/vendor.js" charset="utf-8"></script>
@@ -63,14 +63,13 @@
 
 
   <script type="text/javascript">
-  var App = require('app');
-  var appEl = document.querySelector('.dog-tiles');
-  var thing = new App(appEl);
-  var createForm = require('create-form');
-  var toggle = new createForm(appEl);
-  thing.start();
-  thing.render();
-
+    var App = require('app');
+    var appEl = document.querySelector('.dog-tiles');
+    var thing = new App(appEl);
+    var createForm = require('create-form');
+    var toggle = new createForm(appEl);
+    thing.start();
+    thing.render();
   </script>
 </body>
 

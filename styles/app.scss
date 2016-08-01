@@ -11,9 +11,11 @@ body {
   margin: 0;
   font-family: fantasy;
 }
+
 p {
   margin-bottom: 0;
 }
+
 input {
   width: 100%;
   border-top: none;
@@ -23,17 +25,19 @@ input {
   outline: none;
   font-size: 1rem;
 }
+
 .btn {
   background: #ff5901;
   width: 3.5rem;
   font-size: 1rem;
-  padding: .3rem;
+  padding: 0.3rem;
   color: #fff;
   border-radius: 7%;
   border: 1px solid #ff5901;
   margin: 1rem 0;
   outline: none;
 }
+
 .nav {
   width: 100%;
 }
@@ -44,6 +48,7 @@ header {
   display: flex;
   justify-content: center;
 }
+
 .header-content {
   display: flex;
   justify-content: space-between;
@@ -54,7 +59,7 @@ header {
 .title {
   margin: 0;
   color: #fff;
-  padding: .6rem;
+  padding: 0.6rem;
 }
 
 .circle {
@@ -84,9 +89,11 @@ header {
     width: 60rem;
 
   }
+
   &__text {
     margin: 0;
   }
+
   &__input {
     background: #4E5A5E;
   }
@@ -95,15 +102,18 @@ header {
 .dog-tiles {
   list-style: none;
 }
+
 .dog-content {
   overflow: scroll;
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 .img-frame {
   margin: 0 1rem;
 }
+
 .dog-card {
   background: #f1eff1;
   width: 60rem;
@@ -112,14 +122,15 @@ header {
   margin: $gutter;
   border-radius: 1%;
 
-
   &__info {
     width: 100%;
     padding: 0 1rem;
   }
+
   &__name {
     margin-top: 0;
   }
+
   &__input {
     background: #f1eff1;
   }
@@ -129,6 +140,7 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
 .card {
   width: 5rem;
 }
