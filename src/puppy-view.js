@@ -25,7 +25,7 @@ const template = `
 export default class PuppyView {
   constructor(data, element) {
     this.element = element;
-    this.data = [];
+    this.data = data;
 
     this.element = document.createElement('li');
     this.element.classList = ('puppy-list__item');
@@ -40,9 +40,9 @@ export default class PuppyView {
       url: this.element.querySelector('.dog-card__url'),
       profile: this.element.querySelector('.dog-card__profile')
     };
-    this.selectors.name.innerText = this.data.name;
-    this.selectors.age.innerText = this.data.age;
-    this.selectors.url.innerText = this.data.url;
-    this.selectors.profile.innerText = this.data.profile;
+    selectors.name.innerText = this.data.name;
+    selectors.age.innerText = this.data.age;
+    selectors.url.innerText = this.data.url;
+    selectors.profile.innerText = this.data.profile;
   }
 }

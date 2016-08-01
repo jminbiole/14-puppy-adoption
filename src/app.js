@@ -14,8 +14,9 @@ export default class App {
   }
   render() {
     this.doggoList.innerHTML = '';
-    const components = this.data.map((item) => new PuppyView(item));
+    const components = this.data.map((item) => new PuppyView(item, this));
     components.forEach((card) => {
+      card.render();
       this.doggoList.appendChild(card.element);
     });
   }
