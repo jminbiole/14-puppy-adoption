@@ -75,14 +75,14 @@ header {
   background: #4E5A5E;
   color: #fff;
   width: 100%;
-  display: flex;
-  justify-content: center;
   width: 100%;
   display: none;
+  padding-top: 2rem;
 
   &__toggle {
-    display: block;
+    display: flex;
     justify-content: center;
+
   }
 
   &__content {
