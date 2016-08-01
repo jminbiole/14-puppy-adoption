@@ -17,7 +17,8 @@
           <button class="circle">o</button>
         </div>
       </header>
-      <div class="add-pup">
+    </div>
+      <form class="add-pup">
         <div class="add-pup__content">
           <h2 class="add-pup__text">Add a new perpee</h2>
           <p class="add-pup__name">Name</p>
@@ -28,12 +29,12 @@
           <input class="add-pup__input" type="text" name="" id="">
           <p class="add-pup__profile">Profile</p>
           <input class="add-pup__input" type="text" name="" id="">
-          <button class="btn">Save</button>
+          <button class="btn" type="submit">Save</button>
         </div>
-      </div>
-    </div>
+      </form>
 
     <div class="dog-tiles">
+      <div class="dog-content">
       <div class="dog-card">
         <div class="img-frame">
           <img src="http://www.placecage.com/c/300/300" alt="">
@@ -55,6 +56,7 @@
       </div>
     </div>
   </div>
+  </div>
 
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
@@ -62,9 +64,12 @@
 
   <script type="text/javascript">
   var App = require('app');
-  var appEl = document.querySelector('.add-pup');
+  var appEl = document.querySelector('.dog-tiles');
   var thing = new App(appEl);
+  var createForm = require('create-form');
+  var toggle = new createForm(appEl);
   thing.start();
+  thing.render();
 
   </script>
 </body>
