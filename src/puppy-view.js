@@ -2,17 +2,17 @@ const template = `
 <div class="dog-content">
   <div class="dog-card">
     <div class="img-frame">
-      <img src="http://www.placecage.com/c/300/300" alt="">
+      <img class="img-frame__photo" src="" alt="">
     </div>
     <div class="dog-card__info">
-      <p class="dog-card__name">Name</p>
-      <input class="dog-card__input" type="text" name="" id="">
-      <p class="dog-card__age">Age</p>
-      <input class="dog-card__input" type="text" name="" id="">
-      <p class="dog-card__url">Photo URL</p>
-      <input class="dog-card__input" type="text" name="" id="">
-      <p class="dog-card__profile">Profile</p>
-      <input class="dog-card__input" type="text" name="" id="">
+      <p>Name</p>
+      <input class="dog-card__name input-name" type="text" name="" id="">
+      <p>Age</p>
+      <input class="dog-card__age input"-age type="text" name="" id="">
+      <p>Photo URL</p>
+      <input class="dog-card__url input-url" type="text" name="" id="">
+      <p>Profile</p>
+      <input class="dog-card__profile input-profile" type="text" name="" id="">
       <div class="btns">
         <button class="btn card">Delete</button>
         <button class="btn card">Update</button>
@@ -30,7 +30,6 @@ export default class PuppyView {
     this.element = document.createElement('li');
     this.element.classList = ('puppy-list__item');
     this.element.innerHTML = template;
-
   }
 
   render() {
@@ -38,11 +37,13 @@ export default class PuppyView {
       name: this.element.querySelector('.dog-card__name'),
       age: this.element.querySelector('.dog-card__age'),
       url: this.element.querySelector('.dog-card__url'),
-      profile: this.element.querySelector('.dog-card__profile')
+      profile: this.element.querySelector('.dog-card__profile'),
+      img: this.element.querySelector('.img-frame__photo'),
     };
-    selectors.name.innerText = this.data.name;
-    selectors.age.innerText = this.data.age;
-    selectors.url.innerText = this.data.url;
-    selectors.profile.innerText = this.data.profile;
+    selectors.name.value = this.data.name;
+    selectors.age.value = this.data.age;
+    selectors.url.value = this.data.url;
+    selectors.profile.value = this.data.profile;
+    selectors.img.src = this.data.url;
   }
 }

@@ -17,30 +17,37 @@ export default class CreateFromView {
     addPuppyButton.addEventListener('click', onClick);
   }
   setupForm() {
-    const nameInput = this.element.querySelector('.add-pup__name');
-    const ageInput = this.element.querySelector('.add-pup__age');
-    const urlInput = this.element.querySelector('.add-pup__url');
-    const profileInput = this.element.querySelector('.add-pup__profile');
+    const nameInput = this.element.querySelector('.input-name');
+    const ageInput = this.element.querySelector('.input-age');
+    const urlInput = this.element.querySelector('.input-url');
+    const profileInput = this.element.querySelector('.input-profile');
 
     const btn = document.querySelector('.add-pup');
     btn.addEventListener('submit', (ev) => {
       ev.preventDefault();
-      const name = nameInput.innerText.value;
-      const age = ageInput.value;
-      const url = urlInput.value;
-      const profile = profileInput.value;
+      const formData = {
+        name: nameInput.value,
+        age: ageInput.value,
+        url: urlInput.value,
+        profile: profileInput.value,
+
+      };
 
       fetch('http://tiny-tn.herokuapp.com/collections/jm-puppy', {
         method: 'POST',
-        body: JSON.stringify({ name, age, url, profile }),
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify(formData),
       })
       .then((res) => res.json())
-      .then((newSave) => {
-        this.application.addPup(newSave);
+      .then((data) => {
+        this.element.querySelector('.input-name').value = '';
+        this.element.querySelector('.input-age').value = '';
+        this.element.querySelector('.input-url').value = '';
+        this.element.querySelector('.input-profile').value = '';
+        this.application.addPup(data);
       });
     });
   }

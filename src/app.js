@@ -12,12 +12,17 @@ export default class App {
 
     this.render();
   }
+  addPup(puppy) {
+    this.data = [puppy, ...this.data];
+
+    this.render();
+  }
   render() {
     this.doggoList.innerHTML = '';
     const components = this.data.map((item) => new PuppyView(item, this));
     components.forEach((card) => {
-      card.render();
       this.doggoList.appendChild(card.element);
+      card.render();
     });
   }
 
@@ -26,14 +31,16 @@ export default class App {
       .then((res) => res.json())
       .then((data) => {
         this.data = data;
-        this.render();
+        this.render(data);
         console.log(this.data);
       });
   }
 
-  remove(goAway) {
+  remove(puppy) {
+   this.data = this.data.filter((item) => {
+     return item.id !== puppy.id;
+   });
+   this.render();
 
-  }
-
-
+}
 }
