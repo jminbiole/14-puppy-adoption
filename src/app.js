@@ -32,15 +32,21 @@ export default class App {
       .then((data) => {
         this.data = data;
         this.render(data);
-        console.log(this.data);
       });
   }
 
-  remove(puppy) {
-   this.data = this.data.filter((item) => {
-     return item.id !== puppy.id;
-   });
-   this.render();
+  remove(noPup) {
+    this.data = this.data.filter((nope) => nope._id !== noPup._id);
+    this.render();
+  }
 
-}
+  updatePuppy(changePup) {
+    this.data = this.data.map((data) => {
+      if (data._id === changePup._id) {
+        return changePup;
+      }
+      return data;
+    });
+  }
+
 }

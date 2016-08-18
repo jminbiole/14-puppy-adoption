@@ -26,11 +26,20 @@ input {
   font-size: 1rem;
 }
 
-.btn {
+.delete-btn {
   background: #ff5901;
-  width: 3.5rem;
   font-size: 1rem;
-  padding: 0.3rem;
+  padding: .5rem;
+  color: #fff;
+  border-radius: 7%;
+  border: 1px solid #ff5901;
+  margin: 1rem 0;
+  outline: none;
+}
+.update-btn {
+  background: #ff5901;
+  font-size: 1rem;
+  padding: .5rem;
   color: #fff;
   border-radius: 7%;
   border: 1px solid #ff5901;
@@ -139,8 +148,4 @@ input {
 .btns {
   display: flex;
   justify-content: space-between;
-}
-
-.card {
-  width: 5rem;
 }

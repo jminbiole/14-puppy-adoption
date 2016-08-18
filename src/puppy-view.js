@@ -14,8 +14,8 @@ const template = `
       <p>Profile</p>
       <input class="dog-card__profile input-profile" type="text" name="" id="">
       <div class="btns">
-        <button class="btn card">Delete</button>
-        <button class="btn card">Update</button>
+        <button class="delete-btn">Delete</button>
+        <button class="update-btn">Update</button>
       </div>
     </div>
   </div>
@@ -23,13 +23,14 @@ const template = `
   `;
 
 export default class PuppyView {
-  constructor(data, element) {
-    this.element = element;
-    this.data = data;
+  constructor(puppyData, application) {
+    this.application = application;
+    this.puppyData = puppyData;
 
-    this.element = document.createElement('li');
-    this.element.classList = ('puppy-list__item');
+    this.element = document.createElement('div');
+    this.element.classList.add('puppy-list__item');
     this.element.innerHTML = template;
+    this.setupListenerDelete();
   }
 
   render() {
@@ -40,10 +41,45 @@ export default class PuppyView {
       profile: this.element.querySelector('.dog-card__profile'),
       img: this.element.querySelector('.img-frame__photo'),
     };
-    selectors.name.value = this.data.name;
-    selectors.age.value = this.data.age;
-    selectors.url.value = this.data.url;
-    selectors.profile.value = this.data.profile;
-    selectors.img.src = this.data.url;
+    selectors.name.value = this.puppyData.name;
+    selectors.age.value = this.puppyData.age;
+    selectors.url.value = this.puppyData.url;
+    selectors.profile.value = this.puppyData.profile;
+    selectors.img.src = this.puppyData.url;
+  }
+
+  setupListenerDelete() {
+    this.element.querySelector('.delete-btn').addEventListener('click', (ev) => {
+      ev.preventDefault();
+      return fetch(`http://tiny-tn.herokuapp.com/collections/jm-puppy/${this.puppyData._id}`, {
+        method: 'DELETE',
+      })
+        .then((res) => res.json())
+        .then(() => {
+          this.application.remove(this.puppyData);
+        });
+    });
+  }
+  updatePuppy() {
+    this.element.querySelector('.update-btn').addEventListener('click', (ev) => {
+      ev.preventDefault();
+      fetch(`http://tiny-tn.herokuapp.com/collections/jm-puppy/${this.puppyData._id}`, {
+        method: 'PUT',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          _id: this.puppyData._id,
+          name: this.element.querySelector('.dog-card__name').value,
+          age: this.element.querySelector('.dog-card__age').value,
+          url: this.element.querySelector('.dog-card__url').value,
+          profile: this.element.querySelector('.dog-card__profile').value,
+        }),
+      }).then((res) => res.json())
+      .then((newData) => {
+        this.application.updatePuppy(newData);
+      });
+    });
   }
 }
