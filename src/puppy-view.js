@@ -31,6 +31,7 @@ export default class PuppyView {
     this.element.classList.add('puppy-list__item');
     this.element.innerHTML = template;
     this.setupListenerDelete();
+    this.updatePuppy();
   }
 
   render() {
@@ -63,7 +64,7 @@ export default class PuppyView {
   updatePuppy() {
     this.element.querySelector('.update-btn').addEventListener('click', (ev) => {
       ev.preventDefault();
-      fetch(`http://tiny-tn.herokuapp.com/collections/jm-puppy/${this.puppyData._id}`, {
+      return fetch(`http://tiny-tn.herokuapp.com/collections/jm-puppy/${this.puppyData._id}`, {
         method: 'PUT',
         headers: {
           Accept: 'application/json',
@@ -78,6 +79,8 @@ export default class PuppyView {
         }),
       }).then((res) => res.json())
       .then((newData) => {
+        this.puppyData = newData;
+        this.render();
         this.application.updatePuppy(newData);
       });
     });

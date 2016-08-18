@@ -9,14 +9,14 @@ export default class App {
     this.doggoList = element.querySelector('.dog-tiles');
     this.form = new CreateForm(this.element, this);
     this.data = [];
-
     this.render();
   }
+
   addPup(puppy) {
     this.data = [puppy, ...this.data];
-
     this.render();
   }
+
   render() {
     this.doggoList.innerHTML = '';
     const components = this.data.map((item) => new PuppyView(item, this));
@@ -45,6 +45,7 @@ export default class App {
       if (data._id === changePup._id) {
         return changePup;
       }
+
       return data;
     });
   }
