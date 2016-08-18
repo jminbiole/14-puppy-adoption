@@ -1,171 +1,161 @@
 // @import 'yoga';
 // @import 'normalize';
-
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
-
 $gutter: 1rem;
-
 body {
-  margin: 0;
-  font-family: fantasy;
+    margin: 0;
+    font-family: fantasy;
 }
-
 p {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
-
 input {
-  width: 100%;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid #262c2e;
-  outline: none;
-  font-size: 1rem;
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #262c2e;
+    outline: none;
+    font-size: 1rem;
 }
-
 .delete-btn {
-  background: #ff5901;
-  font-size: 1rem;
-  padding: .5rem;
-  color: #fff;
-  border-radius: 7%;
-  border: 1px solid #ff5901;
-  margin: 1rem 0;
-  outline: none;
+    background: #f00;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 7%;
+    border: 1px solid #f00;
+    margin: 1rem 0 0;
+    outline: none;
 }
 .update-btn {
-  background: #ff5901;
-  font-size: 1rem;
-  padding: .5rem;
-  color: #fff;
-  border-radius: 7%;
-  border: 1px solid #ff5901;
-  margin: 1rem 0;
-  outline: none;
+    background: #ff5901;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 7%;
+    border: 1px solid #ff5901;
+    margin: 1rem 0 0;
+    outline: none;
 }
-
 .nav {
-  width: 100%;
+    width: 100%;
 }
-
 header {
-  background: #ff5901;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  width: 60rem;
-
-}
-
-.title {
-  margin: 0;
-  color: #fff;
-  padding: 0.6rem;
-}
-
-.circle {
-  background: #ff5901;
-  color: #fff;
-  font-size: 1.5rem;
-  border: none;
-  outline: none;
-
-}
-
-.add-pup {
-  background: #4E5A5E;
-  color: #fff;
-  width: 100%;
-  width: 100%;
-  display: none;
-  padding-top: 2rem;
-
-  &__toggle {
+    background: #ff5901;
+    width: 100%;
     display: flex;
     justify-content: center;
-
-  }
-
-  &__content {
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
     width: 60rem;
-
-  }
-
-  &__text {
+}
+.title {
     margin: 0;
-  }
-
+    color: #fff;
+    padding: 0.6rem;
+}
+.circle {
+    background: #ff5901;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+}
+.add-pup {
+    background: #4E5A5E;
+    color: #fff;
+    width: 100%;
+    width: 100%;
+    display: none;
+    &__toggle {
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        width: 60rem;
+        margin: 1rem;
+    }
+    &__text {
+        margin: 0;
+    }
 }
 input {
     background: #4E5A5E;
 }
-
-.dog-tiles {
-  list-style: none;
-}
-
 .dog-content {
-  overflow: scroll;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
-
+.card-left {
+    flex-grow: 1;
+    width: 50%;
+    min-width: 15rem;
+    margin: 0;
+    padding: 0;
+}
 .img-frame {
-  margin: 0 1rem;
-  width: 100%;
-
-  &__photo {
     width: 100%;
-    height: auto;
-  }
+    &__photo {
+        width: 100%;
+        height: auto;
+    }
 }
-
+.card-right {
+    width: 50%;
+    min-width: 15rem;
+    flex-grow: 1;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
 .dog-card {
-  background: #f1eff1;
-  width: 60rem;
-  display: flex;
-  padding: $gutter;
-  margin: $gutter;
-  border-radius: 1%;
-
-  &__info {
-    width: 100%;
+    background: #f1eff1;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60rem;
+    padding: $gutter;
+    margin: $gutter;
+    border-radius: 1%;
+    &__name {
+        margin-top: 0;
+        background: #f1eff1;
+    }
+    &__age {
+        background: #f1eff1;
+    }
+    &__url {
+        background: #f1eff1;
+    }
+    &__profile {
+        background: #f1eff1;
+    }
+}
+.dog-info {
     padding: 0 1rem;
-  }
-
-  &__name {
-    margin-top: 0;
-    background: #f1eff1;
-  }
-  &__age {
-    background: #f1eff1;
-  }
-  &__url {
-    background: #f1eff1;
-  }
-  &__profile {
-    background: #f1eff1;
-  }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .puppy-name {
-  margin: 0;
+    margin: 0;
 }
-
 .btns {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
 }
 .submit-btn {
-  padding: .5rem;
-  background: #fff;
-  color: #000;
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 7%;
 }

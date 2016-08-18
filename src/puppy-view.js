@@ -1,21 +1,25 @@
 const template = `
 <div class="dog-content">
   <div class="dog-card">
-    <div class="img-frame">
-      <img class="img-frame__photo" src="" alt="">
+    <div class="card-left">
+      <div class="img-frame">
+        <img class="img-frame__photo" src="" alt="">
+      </div>
     </div>
-    <div class="dog-card__info">
-      <p class="puppy-name">Name</p>
-      <input class="dog-card__name" type="text" name="" id="">
-      <p>Age</p>
-      <input class="dog-card__age" type="text" name="" id="">
-      <p>Photo URL</p>
-      <input class="dog-card__url" type="text" name="" id="">
-      <p>Profile</p>
-      <input class="dog-card__profile" type="text" name="" id="">
-      <div class="btns">
-        <button class="delete-btn">Delete</button>
-        <button class="update-btn">Update</button>
+    <div class="card-right">
+      <div class="dog-info">
+        <p class="puppy-name">Name:</p>
+        <input class="dog-card__name" type="text" name="" id="">
+        <p>Age:</p>
+        <input class="dog-card__age" type="text" name="" id="">
+        <p>Photo URL:</p>
+        <input class="dog-card__url" type="text" name="" id="">
+        <p>Profile:</p>
+        <input class="dog-card__profile" type="text" name="" id="">
+        <div class="btns">
+          <button class="delete-btn">Delete</button>
+          <button class="update-btn">Update</button>
+        </div>
       </div>
     </div>
   </div>
