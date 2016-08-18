@@ -5,6 +5,7 @@ export default class CreateFromView {
     this.element = element;
     this.application = application;
     this.toggle();
+    this.toggleAway();
     this.setupForm();
   }
   toggle() {
@@ -16,6 +17,16 @@ export default class CreateFromView {
     }
     addPuppyButton.addEventListener('click', onClick);
   }
+  toggleAway() {
+    const addPuppyButton = document.querySelector('.submit-btn');
+    const addPuppyForm = document.querySelector('.add-pup');
+
+    function onSubmit() {
+      addPuppyForm.classList.remove('add-pup__toggle');
+    }
+    addPuppyButton.addEventListener('click', onSubmit);
+  }
+
   setupForm() {
     const nameInput = this.element.querySelector('.input-name');
     const ageInput = this.element.querySelector('.input-age');

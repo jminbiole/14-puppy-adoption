@@ -121,6 +121,12 @@ input {
 
 .img-frame {
   margin: 0 1rem;
+  width: 100%;
+
+  &__photo {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .dog-card {
@@ -138,14 +144,28 @@ input {
 
   &__name {
     margin-top: 0;
-  }
-
-  &__input {
     background: #f1eff1;
   }
+  &__age {
+    background: #f1eff1;
+  }
+  &__url {
+    background: #f1eff1;
+  }
+  &__profile {
+    background: #f1eff1;
+  }
+}
+.puppy-name {
+  margin: 0;
 }
 
 .btns {
   display: flex;
   justify-content: space-between;
+}
+.submit-btn {
+  padding: .5rem;
+  background: #fff;
+  color: #000;
 }

@@ -5,14 +5,14 @@ const template = `
       <img class="img-frame__photo" src="" alt="">
     </div>
     <div class="dog-card__info">
-      <p>Name</p>
-      <input class="dog-card__name input-name" type="text" name="" id="">
+      <p class="puppy-name">Name</p>
+      <input class="dog-card__name" type="text" name="" id="">
       <p>Age</p>
-      <input class="dog-card__age input"-age type="text" name="" id="">
+      <input class="dog-card__age" type="text" name="" id="">
       <p>Photo URL</p>
-      <input class="dog-card__url input-url" type="text" name="" id="">
+      <input class="dog-card__url" type="text" name="" id="">
       <p>Profile</p>
-      <input class="dog-card__profile input-profile" type="text" name="" id="">
+      <input class="dog-card__profile" type="text" name="" id="">
       <div class="btns">
         <button class="delete-btn">Delete</button>
         <button class="update-btn">Update</button>
