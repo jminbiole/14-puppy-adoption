@@ -1,6 +1,171 @@
 // @import 'yoga';
 // @import 'normalize';
-
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+$gutter: 1rem;
+body {
+    margin: 0;
+    font-family: fantasy;
+}
+p {
+    margin-bottom: 0;
+}
+input {
+    width: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #262c2e;
+    outline: none;
+    font-size: 1rem;
+}
+.delete-btn {
+    background: #b00;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 7%;
+    border: 1px solid #b00;
+    margin: 1rem 0 0;
+    outline: none;
+}
+.update-btn {
+    background: #1acdad;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 7%;
+    border: 1px solid #1acdad;
+    margin: 1rem 0 0;
+    outline: none;
+}
+.nav {
+    width: 100%;
+}
+header {
+    background: #1acdad;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 60rem;
+}
+.title {
+    margin: 0;
+    color: #fff;
+    padding: 1rem 0;
+}
+.circle {
+    background: #1acdad;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+}
+.add-pup {
+    background: #4d7a88;
+    color: #fff;
+    width: 100%;
+    width: 100%;
+    display: none;
+    &__toggle {
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        width: 60rem;
+        margin: 1rem;
+    }
+    &__text {
+        margin: 0;
+    }
+}
+input {
+    background: #4d7a88;
+}
+.dog-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.card-left {
+    flex-grow: 1;
+    width: 50%;
+    min-width: 15rem;
+    margin: 0;
+    padding: 0;
+}
+.img-frame {
+    width: 100%;
+    &__photo {
+        width: 100%;
+        height: auto;
+    }
+}
+.card-right {
+    width: 50%;
+    min-width: 15rem;
+    flex-grow: 1;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+.dog-card {
+    background: #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60rem;
+    padding: $gutter;
+    margin: $gutter;
+    border-radius: 1%;
+    box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.4);
+    &__name {
+        margin-top: 0;
+        background: #ddd;
+    }
+    &__age {
+        background: #ddd;
+    }
+    &__url {
+        background: #ddd;
+    }
+    &__profile {
+        background: #ddd;
+    }
+}
+.dog-info {
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.puppy-name {
+    margin: 0;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+.submit-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    background: #fff;
+    color: #000;
+    border: 2px solid #fff;
+    border-radius: 7%;
+}
+@media only screen and (max-width: 1000px) {
+  .title {
+    margin-left: 1rem;
+  }
+  .circle {
+    margin-right: .5rem;
+  }
+
+}

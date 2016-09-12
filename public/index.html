@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>14-Puppy-Adoption</title>
-  <link rel="stylesheet" href="/app.css">
+    <meta charset="utf-8">
+    <title>Puppy Adoption</title>
+    <link rel="stylesheet" href="/app.css">
 </head>
+
 <body>
+    <div class="app">
 
-  <script src="/vendor.js" charset="utf-8"></script>
-  <script src="/app.js" charset="utf-8"></script>
+        <div class="nav">
+            <header>
+                <div class="header-content">
+                    <h1 class="title">Puppies</h1>
+                    <button class="circle">O</button>
+                </div>
+            </header>
+        </div>
+        <form class="add-pup">
+            <div class="add-pup__content">
+                <h2 class="add-pup__text">Add a new puppy</h2>
+                <p class="add-pup__name">Name</p>
+                <input class="input-name" type="text" name="" id="">
+                <p class="add-pup__age">Age</p>
+                <input class="input-age" type="text" name="" id="">
+                <p class="add-pup__url">Photo URL</p>
+                <input class="input-url" type="text" name="" id="">
+                <p class="add-pup__profile">Profile</p>
+                <input class="input-profile" type="text" name="" id="">
+                <button class="submit-btn" type="submit">Save</button>
+            </div>
+        </form>
 
-  <script type="text/javascript">
-  </script>
+        <div class="dog-tiles">
+        </div>
+
+        <script src="/vendor.js" charset="utf-8"></script>
+        <script src="/app.js" charset="utf-8"></script>
+
+
+        <script type="text/javascript">
+            var App = require('app');
+            var appEl = document.querySelector('.app');
+            var thing = new App(appEl);
+
+            thing.start();
+            thing.render();
+        </script>
 </body>
+
 </html>
