@@ -21,22 +21,22 @@ input {
     font-size: 1rem;
 }
 .delete-btn {
-    background: #f00;
+    background: #b00;
     font-size: 1rem;
     padding: 0.5rem;
     color: #fff;
     border-radius: 7%;
-    border: 1px solid #f00;
+    border: 1px solid #b00;
     margin: 1rem 0 0;
     outline: none;
 }
 .update-btn {
-    background: #ff5901;
+    background: #1acdad;
     font-size: 1rem;
     padding: 0.5rem;
     color: #fff;
     border-radius: 7%;
-    border: 1px solid #ff5901;
+    border: 1px solid #1acdad;
     margin: 1rem 0 0;
     outline: none;
 }
@@ -44,7 +44,7 @@ input {
     width: 100%;
 }
 header {
-    background: #ff5901;
+    background: #1acdad;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -57,17 +57,17 @@ header {
 .title {
     margin: 0;
     color: #fff;
-    padding: 0.6rem;
+    padding: 1rem 0;
 }
 .circle {
-    background: #ff5901;
+    background: #1acdad;
     color: #fff;
     font-size: 1.5rem;
     border: none;
     outline: none;
 }
 .add-pup {
-    background: #4E5A5E;
+    background: #4d7a88;
     color: #fff;
     width: 100%;
     width: 100%;
@@ -85,7 +85,7 @@ header {
     }
 }
 input {
-    background: #4E5A5E;
+    background: #4d7a88;
 }
 .dog-content {
     display: flex;
@@ -114,25 +114,26 @@ input {
     padding-bottom: 0.5rem;
 }
 .dog-card {
-    background: #f1eff1;
+    background: #ddd;
     display: flex;
     flex-wrap: wrap;
     width: 60rem;
     padding: $gutter;
     margin: $gutter;
     border-radius: 1%;
+    box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.4);
     &__name {
         margin-top: 0;
-        background: #f1eff1;
+        background: #ddd;
     }
     &__age {
-        background: #f1eff1;
+        background: #ddd;
     }
     &__url {
-        background: #f1eff1;
+        background: #ddd;
     }
     &__profile {
-        background: #f1eff1;
+        background: #ddd;
     }
 }
 .dog-info {
@@ -158,4 +159,13 @@ input {
     color: #000;
     border: 2px solid #fff;
     border-radius: 7%;
+}
+@media only screen and (max-width: 1000px) {
+  .title {
+    margin-left: 1rem;
+  }
+  .circle {
+    margin-right: .5rem;
+  }
+
 }
